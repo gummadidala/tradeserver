@@ -14,6 +14,7 @@ if __name__ == '__main__':
             tele_config = TelegramConfig.objects.all()[0]
             sleep_secs = tele_config.tele_sleep_secs
             tele = Tele()
+            #signals from telegram
             signals = tele.signals
             print(signals)
             active_signals = TradeSignal.objects.filter(is_active=True)
