@@ -75,9 +75,17 @@ WSGI_APPLICATION = 'TradeXpress.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'backup': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.intellitrade',
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME' : 'intellitrade',
+        'USER' : 'dbadmin',
+        'PASSWORD' : 'db1234',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
